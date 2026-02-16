@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://shihabulhaque.github.io/aslam-holidays/sitemap.xml
