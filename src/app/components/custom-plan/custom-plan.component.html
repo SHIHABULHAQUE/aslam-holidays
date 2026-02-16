@@ -13,28 +13,29 @@
         <form (submit)="submitPlan($event)">
             <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" id="name" required placeholder="Your Name">
+                <input type="text" id="name" name="name" required placeholder="Your Name" [(ngModel)]="name">
             </div>
             <div class="form-group">
                 <label for="phone">Phone (WhatsApp)</label>
-                <input type="tel" id="phone" required placeholder="Your Number">
+                <input type="tel" id="phone" name="phone" required placeholder="Your Number" [(ngModel)]="phone">
             </div>
             <div class="form-group">
                 <label>Destinations of Interest</label>
                 <div class="checkbox-group">
-                    <label><input type="checkbox"> Munnar</label>
-                    <label><input type="checkbox"> Alappuzha</label>
-                    <label><input type="checkbox"> Wayanad</label>
-                    <label><input type="checkbox"> Varkala</label>
-                    <label><input type="checkbox"> Kochi</label>
-                    <label><input type="checkbox"> Idukki</label>
+                    <label><input type="checkbox" name="munnar" [(ngModel)]="destinations.Munnar"> Munnar</label>
+                    <label><input type="checkbox" name="alappuzha" [(ngModel)]="destinations.Alappuzha">
+                        Alappuzha</label>
+                    <label><input type="checkbox" name="wayanad" [(ngModel)]="destinations.Wayanad"> Wayanad</label>
+                    <label><input type="checkbox" name="varkala" [(ngModel)]="destinations.Varkala"> Varkala</label>
+                    <label><input type="checkbox" name="kochi" [(ngModel)]="destinations.Kochi"> Kochi</label>
+                    <label><input type="checkbox" name="idukki" [(ngModel)]="destinations.Idukki"> Idukki</label>
                 </div>
             </div>
             <div class="form-group">
                 <label for="days">Number of Days</label>
-                <input type="number" id="days" min="1" max="30" placeholder="e.g., 5">
+                <input type="number" id="days" name="days" min="1" max="30" placeholder="e.g., 5" [(ngModel)]="days">
             </div>
-            <button type="submit" class="submit-btn">Send Request</button>
+            <button type="submit" class="submit-btn" [disabled]="!name || !phone">Send Request via WhatsApp</button>
         </form>
     </div>
 </div>

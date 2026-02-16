@@ -12,6 +12,13 @@
     background-attachment: fixed;
     overflow: hidden;
 
+    @media (max-width: 768px) {
+        background-attachment: scroll;
+        background-position: center top;
+        height: 100vh;
+        /* Ensure full height on mobile */
+    }
+
     .hero-overlay {
         position: absolute;
         top: 0;
