@@ -1,0 +1,20 @@
+<section id="itinerary" class="itinerary">
+    <div class="container">
+        <h2 class="section-title">{{ itineraryTitle }}</h2>
+        <p class="section-subtitle">{{ itinerarySubtitle }}</p>
+
+        <div class="timeline">
+            <div class="timeline-item" *ngFor="let day of currentItinerary; let isEven = even"
+                [ngClass]="{'left': isEven, 'right': !isEven}">
+                <div class="timeline-content">
+                    <div class="date-badge">Day {{ day.day }}</div>
+                    <h3>{{ day.title }}</h3>
+                    <p>{{ day.description }}</p>
+                    <div class="icon-box">
+                        <i class="fas" [ngClass]="day.icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

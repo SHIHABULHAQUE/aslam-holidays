@@ -1,0 +1,25 @@
+<section id="destinations" class="destinations">
+    <div class="container">
+        <h2 class="section-title">Popular Destinations</h2>
+        <p class="section-subtitle">Explore the hidden gems of Kerala</p>
+
+        <div class="grid">
+            <div class="card" *ngFor="let place of destinations" (click)="selectDestination(place.name)">
+                <div class="card-image">
+                    <img [src]="place.image" [alt]="place.name">
+                    <div class="overlay">
+                        <button class="view-btn">View Itinerary</button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3>{{ place.name }}</h3>
+                    <p>{{ place.description }}</p>
+                    <div class="card-footer">
+                        <span class="view-more">See Plan <i class="fas fa-arrow-right"></i></span>
+                        <span class="rating"><i class="fas fa-star"></i> 4.9</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

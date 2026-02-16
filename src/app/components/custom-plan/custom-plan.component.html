@@ -1,0 +1,40 @@
+<div class="custom-plan-cta">
+    <div class="container">
+        <h2>Want a personalized experience?</h2>
+        <p>Create your own travel plan with us.</p>
+        <button class="plan-btn" (click)="openModal()">Create Your Own Plan</button>
+    </div>
+</div>
+
+<div class="modal-overlay" *ngIf="isModalOpen" (click)="closeModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+        <button class="close-btn" (click)="closeModal()">&times;</button>
+        <h2>Plan Your Trip</h2>
+        <form (submit)="submitPlan($event)">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" required placeholder="Your Name">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone (WhatsApp)</label>
+                <input type="tel" id="phone" required placeholder="Your Number">
+            </div>
+            <div class="form-group">
+                <label>Destinations of Interest</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox"> Munnar</label>
+                    <label><input type="checkbox"> Alappuzha</label>
+                    <label><input type="checkbox"> Wayanad</label>
+                    <label><input type="checkbox"> Varkala</label>
+                    <label><input type="checkbox"> Kochi</label>
+                    <label><input type="checkbox"> Idukki</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="days">Number of Days</label>
+                <input type="number" id="days" min="1" max="30" placeholder="e.g., 5">
+            </div>
+            <button type="submit" class="submit-btn">Send Request</button>
+        </form>
+    </div>
+</div>

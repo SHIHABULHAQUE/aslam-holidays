@@ -1,0 +1,20 @@
+<header class="header">
+  <div class="container">
+    <div class="logo">
+      <h1>Aslam Holidays</h1>
+    </div>
+    <nav class="nav" [class.open]="isMenuOpen">
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#destinations">Destinations</a></li>
+        <li><a href="#itinerary">Itinerary</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="menu-toggle" (click)="toggleMenu()" aria-label="Toggle navigation">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </div>
+</header>
