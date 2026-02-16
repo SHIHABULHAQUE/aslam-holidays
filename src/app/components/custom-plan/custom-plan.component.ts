@@ -50,7 +50,7 @@ export class CustomPlanComponent {
             `*Days:* ${this.days || 'Not specified'}`;
 
         const encodedMessage = encodeURIComponent(message);
-        const whatsappUrl = `https://wa.me/919656157018?text=${encodedMessage}`; // Using the number from previous context if available, otherwise defaulting to a placeholder or asking user. Wait, I should probably check if I have a number. The user said "send to whatsapp", usually implies their number. I'll use the one from the floating button if I can find it, or placeholder.
+        const whatsappUrl = `https://wa.me/919895113071?text=${encodedMessage}`; // Default business number
         // Checking floating button...
 
         window.open(whatsappUrl, '_blank');
